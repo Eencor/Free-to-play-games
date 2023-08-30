@@ -87,7 +87,7 @@ export default function GamePage() {
                 </Carousel>
             </div>
             {game.platform === 'Web Browser' ? null :
-            <Descriptions title = 'Минимальные системные требования' column={1} size="middle" style={{width: 600}} >
+            <Descriptions title = 'Минимальные системные требования' column={1} size="middle" style={{width: 500, margin: 'auto'}} >
                 <Descriptions.Item label = 'ОС'>{game.minimum_system_requirements.os}</Descriptions.Item>
                 <Descriptions.Item label = 'Процессор'>{game.minimum_system_requirements.processor}</Descriptions.Item>
                 <Descriptions.Item label = 'Оперативная память'>{game.minimum_system_requirements.memory}</Descriptions.Item>

@@ -5,6 +5,6 @@ import { LeftOutlined } from "@ant-design/icons"
 
 export default function BackButton() {
     return(
-        <Link to={'/'} style={{position: "relative", right: "50px", top: "50px"}} ><Button shape="circle" size="large" style={{position: 'sticky', top: 50}}><LeftOutlined /></Button></Link> 
+        <Link to={'/'} style={{position: "relative", left: '10%', top: "50px"}} ><Button shape="circle" size="large" style={{position: 'sticky', top: 50}}><LeftOutlined /></Button></Link> 
     )
 }

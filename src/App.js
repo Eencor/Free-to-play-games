@@ -18,7 +18,7 @@ function App() {
 
   return (  
     <div className="App">
-      <Layout style={{height: 'max(100%, 100vh)'}}>
+      <Layout style={{alignItems: 'center'}}>
         <Header className="header">
           <Link to={'/'}>
             <span className="header-span">Free to play games</span>

@@ -64,7 +64,26 @@ html, body {width:100%; overflow-x:hidden}
 } 
 
 .game-page-carousel{
-    width: 640px;
+    width:  640px;
+    height: 360px;
     margin: 40px auto;
 }
+
+@media screen and (max-width: 640px) {
+    .game-page-carousel{
+        width:  480px;
+        height: 270px;
+        margin: 40px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game-page-carousel{
+        width:  320px;
+        height: 180px;
+        margin: 40px auto;
+    }
+}
+
+
 

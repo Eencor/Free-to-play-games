@@ -69,7 +69,7 @@ export default function GamePage() {
             <BackButton/>
             <div className="game-page-main">
                 <img src= {game.thumbnail} alt={game.title} style={{width: 365, height: 205}}/>
-                <Descriptions title = {game.title} column={1} size="middle" style={{width: '320px'}} >
+                <Descriptions title = {game.title} column={1} size="middle" style={{width: '300px'}} >
                     <Descriptions.Item label = 'Жанр'>{game.genre}</Descriptions.Item>
                     <Descriptions.Item label = 'Платформа'>{game.platform}</Descriptions.Item>
                     <Descriptions.Item label = 'Дата выхода'>{new Date(game.release_date).toLocaleString('ru', options)}</Descriptions.Item>
@@ -87,7 +87,7 @@ export default function GamePage() {
                 </Carousel>
             </div>
             {game.platform === 'Web Browser' ? null :
-            <Descriptions title = 'Минимальные системные требования' column={1} size="middle" style={{width: 'max(50%, 320px)', margin: 'auto'}} >
+            <Descriptions title = 'Минимальные системные требования' column={1} size="middle" style={{width: 'max(50%, 300px)', margin: 'auto'}} >
                 <Descriptions.Item label = 'ОС'>{game.minimum_system_requirements.os}</Descriptions.Item>
                 <Descriptions.Item label = 'Процессор'>{game.minimum_system_requirements.processor}</Descriptions.Item>
                 <Descriptions.Item label = 'Оперативная память'>{game.minimum_system_requirements.memory}</Descriptions.Item>

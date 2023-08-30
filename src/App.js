@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {useEffect} from "react";
+import {useDispatch} from 'react-redux';
+import Layout from "antd/es/layout/layout"
+import { Header} from "antd/es/layout/layout"
+import { Link, Outlet } from "react-router-dom";
+
+
+import {fetchAllGames} from './store/slice/gamesSlice'
+import './styles/App.css'
+
 
 function App() {
-  return (
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAllGames())  
+  },[dispatch])
+
+  return (  
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout style={{height: 'max(100%, 100vh)'}}>
+        <Header className="header">
+          <Link to={'/'}>
+            <span className="header-span">Free to play games</span>
+          </Link>
+        </Header>
+        <Outlet/>
+      </Layout>
     </div>
   );
 }
